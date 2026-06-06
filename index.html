@@ -113,6 +113,19 @@
   /* ===== QR ===== */
 
 
+
+  /* ===== QR SECTION ===== */
+  .qr-sec{margin:16px 22px 22px;background:linear-gradient(160deg,#0A2540,#103A5C);
+    border-radius:18px;padding:20px 24px;display:flex;align-items:center;gap:18px;
+    position:relative;overflow:hidden;}
+  .qr-sec::before{content:'';position:absolute;top:-20px;left:-20px;width:90px;height:90px;
+    background:radial-gradient(circle,rgba(201,162,75,.2),transparent 70%);}
+  .qr-sec .qimg{width:86px;height:86px;background:#fff;border-radius:12px;padding:6px;flex-shrink:0;position:relative;z-index:1;}
+  .qr-sec .qimg img{width:100%;height:100%;display:block;}
+  .qr-sec .qtxt{position:relative;z-index:1;}
+  .qr-sec .qtxt .qt{font-size:13px;font-weight:700;color:#fff;margin-bottom:3px;}
+  .qr-sec .qtxt .qs{font-size:10px;color:rgba(255,255,255,.6);line-height:1.5;}
+  .qr-sec .qtxt .qen{font-size:9px;color:#C9A24B;letter-spacing:1px;margin-top:4px;}
   .toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(20px);
     background:var(--navy);color:#fff;padding:11px 22px;border-radius:30px;font-size:13px;font-weight:600;
     opacity:0;transition:.3s;z-index:50;box-shadow:0 8px 24px rgba(0,0,0,.3);}
@@ -167,6 +180,15 @@
       <span class="meta"><span class="t">البريد <span class="en">Email</span></span><span class="s">saad-5362@hotmail.com</span></span>
       <span class="go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></span>
     </a>
+  </div>
+
+  <div class="qr-sec">
+    <div class="qimg"><img src="data:image/png;base64,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" alt="QR"/></div>
+    <div class="qtxt">
+      <div class="qt">امسح للوصول السريع</div>
+      <div class="qs">جميع روابط التواصل في مكان واحد</div>
+      <div class="qen">SCAN FOR ALL LINKS</div>
+    </div>
   </div>
   </div>
 
